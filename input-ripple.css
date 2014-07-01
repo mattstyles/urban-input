@@ -7,7 +7,7 @@
     cursor: text;
 }
 
-.container {
+#container {
     position: relative;
     left: 0;
     top: 0;
@@ -16,6 +16,13 @@
     padding: .5em 1em;
 }
 
-.label {
+#label {
     position: absolute;
+}
+#label.hidden {
+    display: none;
+}
+
+#ripple {
+    pointer-events: none;
 }
