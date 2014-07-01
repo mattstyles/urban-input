@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>input-ripple Demo</title>
+
+    <script src="../platform/platform.js"></script>
+    <link rel="import" href="input-ripple.html">
+
+    <style media="screen">
+        body {
+            font: 16px/1.33em 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Tahoma', sans-serif;
+            font-weight: 300;
+            color: #444;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            padding: 20px;
+        }
+
+        input-ripple {
+            background: #eee;
+            border-radius: 6px;
+        }
+        .container {
+            display: block;
+            margin: 2em 0;
+        }
+    </style>
+</head>
+<body unresolved>
+
+    <p>An `input-ripple` looks like this:</p>
+
+    <div class="container">
+        <input-ripple></input-ripple>
+    </div>
+
+    <div class="container">
+        <input-ripple label="placeholder text"></input-ripple>
+    </div>
+
+</body>
+</html>

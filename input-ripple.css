@@ -1,0 +1,21 @@
+:host {
+    position: relative;
+    display: inline-block;
+    color: #888;
+}
+:host(:hover) {
+    cursor: text;
+}
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: .5em 1em;
+}
+
+.label {
+    position: absolute;
+}

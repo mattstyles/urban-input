@@ -1,0 +1,78 @@
+<!--
+Copyright (c) 2014 Matt Styles @personalurban
+Element providing a ripple on focussing an input box.
+
+##### Example
+
+<input-ripple></input-ripple>
+
+@element input-ripple
+@blurb Element providing a ripple on focussing an input box.
+@status alpha
+@homepage http://mattstyles.github.io/input-ripple
+-->
+
+
+<link href="../polymer/polymer.html" rel="import">
+<link href="../core-input/core-input.html" rel="import">
+
+
+<polymer-element extends="core-input" name="input-ripple" attributes="label">
+
+    <template>
+
+        <link rel="stylesheet" href="input-ripple.css" />
+
+        <div class="container">
+            <span class="label">{{ label }}</span>
+            <shadow></shadow>
+        </div>
+
+
+    </template>
+
+<script>
+
+Polymer('input-ripple', {
+  /**
+   * The `noevent` event is not actually fired from here,
+   * we document it as an example of documenting events.
+   *
+   * @event noevent
+   */
+
+  /**
+   * The `notitle` attribute does not yet have a purpose.
+   *
+   * @attribute notitle
+   * @type string
+   */
+  label: '',
+
+  /**
+   * The `aProp` is a property that does something cool.
+   *
+   * @property aProp
+   * @type bool
+   */
+  aProp: false,
+
+  ready: function() {
+      this.super();
+  },
+
+  /**
+   * The `task` method does no work at this time.
+   *
+   * @method task
+   * @return {Object} Returns undefined.
+   * @param {String} dummy Serves no purpose today.
+   */
+  task: function(dummy) {
+  }
+
+});
+
+</script>
+
+</polymer-element>
