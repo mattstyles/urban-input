@@ -1,6 +1,6 @@
 {
   "name": "input-ripple",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "keywords": "seed, polymer, web-components",
   "main": "input-ripple.html",
   "dependencies": {
