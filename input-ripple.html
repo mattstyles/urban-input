@@ -52,21 +52,19 @@ Polymer( 'input-ripple', {
      */
     label: '',
 
+
     /**
-     * The `aProp` is a property that does something cool.
-     *
-     * @property aProp
-     * @type bool
+     * Event delegation
      */
-    aProp: false,
-
-
     eventDelegates: {
         down: 'downAction',
         up: 'upAction'
     },
 
 
+    /**
+     * Fired when ready
+     */
     ready: function() {
         this.super();
     },
@@ -83,18 +81,14 @@ Polymer( 'input-ripple', {
 
 
     downAction: function( e ) {
-        if ( this.focussed ) {
-            return;
-        }
-
         this.$.ripple.downAction({
             x: e.x,
             y: e.y
         });
 
         this.pressed = true;
-
     },
+
 
     upAction: function( e ) {
         this.$.ripple.upAction();
@@ -102,9 +96,11 @@ Polymer( 'input-ripple', {
         this.pressed = false;
     },
 
+
     focusAction: function() {
         this.focussed = true;
     },
+
 
     blurAction: function() {
         if ( this.pressed ) {
