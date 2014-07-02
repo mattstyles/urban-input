@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "keywords": "seed, polymer, web-components",
   "main": "input-ripple.html",
+  "homepage": "https://github.com/mattstyles/input-ripple",
   "dependencies": {
     "polymer": "Polymer/polymer#~0.3.1",
     "core-input": "Polymer/core-input#~0.3.3",
