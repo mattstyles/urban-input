@@ -18,7 +18,7 @@ Element providing a ripple on focussing an input box.
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 
 
-<polymer-element extends="core-input" name="input-ripple" attributes="label" on-down="{{downAction}}" on-up="{{upAction}}">
+<polymer-element extends="core-input" name="input-ripple" attributes="label">
 
     <template>
 
@@ -61,24 +61,14 @@ Polymer( 'input-ripple', {
     aProp: false,
 
 
-    // eventDelegates: {
-    //     down: 'downAction',
-    //     up: 'upAction'
-    // },
+    eventDelegates: {
+        down: 'downAction',
+        up: 'upAction'
+    },
 
 
     ready: function() {
         this.super();
-    },
-
-    /**
-     * The `task` method does no work at this time.
-     *
-     * @method task
-     * @return {Object} Returns undefined.
-     * @param {String} dummy Serves no purpose today.
-     */
-    task: function(dummy) {
     },
 
 
@@ -93,15 +83,34 @@ Polymer( 'input-ripple', {
 
 
     downAction: function( e ) {
+        if ( this.focussed ) {
+            return;
+        }
+
         this.$.ripple.downAction({
             x: e.x,
             y: e.y
         });
+
+        this.pressed = true;
+
     },
 
     upAction: function( e ) {
-        console.log( 'up' );
         this.$.ripple.upAction();
+        this.$.input.focus();
+        this.pressed = false;
+    },
+
+    focusAction: function() {
+        this.focussed = true;
+    },
+
+    blurAction: function() {
+        if ( this.pressed ) {
+            return;
+        }
+        this.focussed = false;
     }
 
 
