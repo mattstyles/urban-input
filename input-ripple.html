@@ -18,7 +18,7 @@ Element providing a ripple on focussing an input box.
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 
 
-<polymer-element extends="core-input" name="input-ripple" attributes="label">
+<polymer-element extends="core-input" name="input-ripple" attributes="label rippleColor">
 
     <template>
 
@@ -37,20 +37,6 @@ Element providing a ripple on focussing an input box.
 <script>
 
 Polymer( 'input-ripple', {
-    /**
-     * The `noevent` event is not actually fired from here,
-     * we document it as an example of documenting events.
-     *
-     * @event noevent
-     */
-
-    /**
-     * The `notitle` attribute does not yet have a purpose.
-     *
-     * @attribute notitle
-     * @type string
-     */
-    label: '',
 
 
     /**
@@ -67,6 +53,10 @@ Polymer( 'input-ripple', {
      */
     ready: function() {
         this.super();
+
+        if ( this.rippleColor ) {
+            this.$.ripple.style.color = ( /^\#/.test( this.rippleColor ) ? '' : '' ) + this.rippleColor;
+        }
     },
 
 

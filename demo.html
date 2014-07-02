@@ -27,6 +27,8 @@
         h2 code {
             font-weight:400;
             color:#444;
+            font-size: .9em;
+            vertical-align: top;
         }
         h2:first-of-type {
             margin-top: 0;
@@ -70,24 +72,25 @@
 <body unresolved>
 
     <h2>An <code>input-ripple</code> looks like this:</h2>
-
     <div id="basic" class="container">
         <input-ripple></input-ripple>
     </div>
 
     <h2>With placeholder attribute set:</h2>
-
     <div id="placeholder" class="container">
         <input-ripple label="placeholder text"></input-ripple>
     </div>
 
     <h2>Color bleed:</h2>
     <p>Style up the color on the <code>input-ripple</code> element</p>
-
     <div id="color-bleed" class="container">
         <input-ripple label="placeholder text"></input-ripple>
     </div>
 
+    <h2><code>rippleColor</code> attribute colors just the ripple</h2>
+    <div id="ripple-color" class="container">
+        <input-ripple label="placeholder text" rippleColor="#22a7f0"></input-ripple>
+    </div>
 
 </body>
 </html>
