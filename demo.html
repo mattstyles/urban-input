@@ -11,15 +11,39 @@
         body {
             font: 16px/1.33em 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Tahoma', sans-serif;
             font-weight: 300;
-            /*color: #444;*/
-            color: #f8c;
+            color: #444;
             -webkit-font-smoothing: antialiased;
             margin: 0;
             padding: 20px;
         }
 
-        p {
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 1em;
+            font-size: 1.42em;
+            font-weight: 300;
+            color: #333;
+        }
+        h2 code {
+            font-weight:400;
+            color:#444;
+        }
+        h2:first-of-type {
             margin-top: 0;
+        }
+
+        p {
+            margin-top: .5em;
+            font-size: .85em;
+            font-weight: 400;
+        }
+
+        code {
+            padding: 1px 4px;
+            background: #ecf0f1;
+            font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
+            border-radius: 3px;
+            color: #444;
         }
 
         input-ripple {
@@ -32,26 +56,38 @@
         }
 
         #basic input-ripple {
-            background: #f4f4f4;
+            background: #ecf0f1;
         }
         #basic input-ripple:host /deep/ input {
             color: #46c;
+        }
+
+        #color-bleed input-ripple {
+            color: #ef4836;
         }
     </style>
 </head>
 <body unresolved>
 
-    <p>An `input-ripple` looks like this:</p>
+    <h2>An <code>input-ripple</code> looks like this:</h2>
 
     <div id="basic" class="container">
         <input-ripple></input-ripple>
     </div>
 
-    <p>With placeholder attribute set:</p>
+    <h2>With placeholder attribute set:</h2>
 
     <div id="placeholder" class="container">
         <input-ripple label="placeholder text"></input-ripple>
     </div>
+
+    <h2>Color bleed:</h2>
+    <p>Style up the color on the <code>input-ripple</code> element</p>
+
+    <div id="color-bleed" class="container">
+        <input-ripple label="placeholder text"></input-ripple>
+    </div>
+
 
 </body>
 </html>

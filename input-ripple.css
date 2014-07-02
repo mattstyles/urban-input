@@ -1,6 +1,7 @@
 :host {
     position: relative;
     display: inline-block;
+    color: inherit;
 }
 :host(:hover) {
     cursor: text;
