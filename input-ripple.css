@@ -1,7 +1,6 @@
 :host {
     position: relative;
     display: inline-block;
-    color: #888;
 }
 :host(:hover) {
     cursor: text;
@@ -14,6 +13,7 @@
 :host /deep/ input {
     width: 100%;
     padding: 0;
+    color: inherit;
 }
 
 #container {
@@ -28,6 +28,7 @@
 #label {
     position: absolute;
     pointer-events: none;
+    color: #888;
 }
 #label.hidden {
     display: none;
