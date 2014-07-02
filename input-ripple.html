@@ -71,6 +71,7 @@ Polymer( 'input-ripple', {
      */
     inputValueChanged: function() {
         this.super();
+        this.fire( 'inputChange', this.inputValue );
 
         if ( this.label ) {
             this.$.label.classList.toggle( 'hidden', this.inputValue );
