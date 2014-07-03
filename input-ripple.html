@@ -18,7 +18,7 @@ Element providing a ripple on focussing an input box.
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 
 
-<polymer-element extends="core-input" name="input-ripple" attributes="label rippleColor center">
+<polymer-element extends="core-input" name="input-ripple" attributes="label rippleColor center password">
 
     <template>
 
@@ -39,6 +39,10 @@ Element providing a ripple on focussing an input box.
 Polymer( 'input-ripple', {
 
     center: false,
+
+    password: false,
+
+    bounds: null,
 
 
     /**
@@ -62,6 +66,18 @@ Polymer( 'input-ripple', {
         if ( this.center ) {
             this.classList.add( 'center' );
         }
+
+        if ( this.password ) {
+            this.$.input.type = 'password';
+        }
+    },
+
+
+    /**
+     * onDomReady
+     */
+    domReady: function() {
+        this.bounds = this.getBoundingClientRect();
     },
 
 
