@@ -49,7 +49,6 @@ Polymer( 'input-ripple', {
         up: 'upAction'
     },
 
-
     /**
      * Fired when ready
      */
@@ -98,6 +97,22 @@ Polymer( 'input-ripple', {
 
     focusAction: function() {
         this.focussed = true;
+
+        if ( !this.pressed ) {
+            // Make sure bounds are correct
+            this.bounds = this.getBoundingClientRect();
+
+            // Perform ripple
+            this.$.ripple.downAction({
+                x: this.clientWidth / 2 + this.bounds.left,
+                y: this.clientHeight / 2 + this.bounds.top
+            });
+
+            // End ripple
+            setTimeout( function() {
+                this.$.ripple.upAction();
+            }.bind( this ), 100 );
+        }
     },
 
 
