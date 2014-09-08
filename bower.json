@@ -5,8 +5,8 @@
   "main": "input-ripple.html",
   "homepage": "https://github.com/mattstyles/input-ripple",
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.1",
-    "core-input": "Polymer/core-input#~0.3.3",
-    "paper-ripple": "Polymer/paper-ripple#~0.3.3"
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
+    "core-input": "Polymer/core-input#>=0.3.3 <1.0.0",
+    "paper-ripple": "Polymer/paper-ripple#>=0.3.3 <1.0.0"
   }
 }
