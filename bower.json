@@ -1,8 +1,10 @@
 {
   "name": "urban-input",
   "version": "0.5.1",
+  "description": "Input element with a ripple",
   "keywords": "urban, input, ripple, polymer, web-components",
   "main": "urban-input.html",
+  "author": "Matt Styles @personalurban",
   "homepage": "https://github.com/mattstyles/urban-input",
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
