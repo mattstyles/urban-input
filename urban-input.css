@@ -7,6 +7,18 @@
     cursor: text;
 }
 
+::content core-icon {
+    position: absolute;
+    top: 6px;
+}
+:host(.icon) /deep/ input {
+    margin-left: 32px;
+}
+:host(.icon) /deep/ #label {
+    left: 32px;
+}
+
+
 ::shadow {
     /*padding: .5em 1em;*/
 }

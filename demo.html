@@ -5,7 +5,10 @@
     <title>urban-input Demo</title>
 
     <script src="../platform/platform.js"></script>
+
     <link rel="import" href="urban-input.html">
+    <link rel="import" href="../urban-icons/urban-icons.html">
+    <link rel="import" href="../core-icon/core-icon.html">
 
     <style media="screen">
         body {
@@ -72,6 +75,8 @@
 </head>
 <body unresolved>
 
+    <urban-icons></urban-icons>
+
     <h2>An <code>urban-input</code> looks like this:</h2>
     <div id="basic" class="container">
         <urban-input></urban-input>
@@ -101,6 +106,11 @@
     <h2>Entering a password? No problem</h2>
     <div id="password" class="container">
         <urban-input label="placeholder text" password></urban-input>
+    </div>
+
+    <h2>Want to add an <code>icon</code>? Go ahead</h2>
+    <div id="icon" class="container">
+        <urban-input class="icon" label="placeholder text"><core-icon icon="urban:attention"></core-icon></urban-input>
     </div>
 
 </body>
