@@ -1,9 +1,9 @@
 {
-  "name": "input-ripple",
+  "name": "urban-input",
   "version": "0.5.1",
-  "keywords": "seed, polymer, web-components",
-  "main": "input-ripple.html",
-  "homepage": "https://github.com/mattstyles/input-ripple",
+  "keywords": "urban, input, ripple, polymer, web-components",
+  "main": "urban-input.html",
+  "homepage": "https://github.com/mattstyles/urban-input",
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
     "core-input": "Polymer/core-input#>=0.3.3 <1.0.0",

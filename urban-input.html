@@ -1,28 +1,26 @@
+
+<link href="../polymer/polymer.html" rel="import">
+<link href="../core-input/core-input.html" rel="import">
+<link href="../paper-ripple/paper-ripple.html" rel="import">
+
 <!--
 Copyright (c) 2014 Matt Styles @personalurban
 Element providing a ripple on focussing an input box.
 
 ##### Example
 
-    <input-ripple></input-ripple>
+    <urban-input></urban-input>
 
-@element input-ripple
+@element urban-input
 @blurb Element providing a ripple on focussing an input box.
 @status alpha
-@homepage http://mattstyles.github.io/input-ripple
+@homepage http://mattstyles.github.io/urban-input
 -->
-
-
-<link href="../polymer/polymer.html" rel="import">
-<link href="../core-input/core-input.html" rel="import">
-<link href="../paper-ripple/paper-ripple.html" rel="import">
-
-
-<polymer-element extends="core-input" name="input-ripple" attributes="label rippleColor center password">
+<polymer-element extends="core-input" name="urban-input" attributes="label rippleColor center password">
 
     <template>
 
-        <link rel="stylesheet" href="input-ripple.css" />
+        <link rel="stylesheet" href="urban-input.css" />
 
         <div id="container">
             <template if="{{ label }}">
@@ -36,7 +34,7 @@ Element providing a ripple on focussing an input box.
 
 <script>
 
-Polymer( 'input-ripple', {
+Polymer( 'urban-input', {
 
     center: false,
 

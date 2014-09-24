@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>input-ripple Demo</title>
+    <title>urban-input Demo</title>
 
     <script src="../platform/platform.js"></script>
-    <link rel="import" href="input-ripple.html">
+    <link rel="import" href="urban-input.html">
 
     <style media="screen">
         body {
@@ -48,7 +48,7 @@
             color: #444;
         }
 
-        input-ripple {
+        urban-input {
             /*background: #eee;*/
             border-radius: 6px;
         }
@@ -57,49 +57,49 @@
             margin: 2em 0;
         }
 
-        #basic input-ripple {
+        #basic urban-input {
             background: #ecf0f1;
         }
-        #basic input-ripple:host /deep/ input {
+        #basic urban-input:host /deep/ input {
             color: #46c;
         }
 
-        #color-bleed input-ripple {
+        #color-bleed urban-input {
             color: #ef4836;
         }
     </style>
 </head>
 <body unresolved>
 
-    <h2>An <code>input-ripple</code> looks like this:</h2>
+    <h2>An <code>urban-input</code> looks like this:</h2>
     <div id="basic" class="container">
-        <input-ripple></input-ripple>
+        <urban-input></urban-input>
     </div>
 
     <h2>With <code>placeholder</code> attribute set</h2>
     <div id="placeholder" class="container">
-        <input-ripple label="placeholder text"></input-ripple>
+        <urban-input label="placeholder text"></urban-input>
     </div>
 
     <h2>Color bleed:</h2>
-    <p>Style up the color on the <code>input-ripple</code> element</p>
+    <p>Style up the color on the <code>urban-input</code> element</p>
     <div id="color-bleed" class="container">
-        <input-ripple label="placeholder text"></input-ripple>
+        <urban-input label="placeholder text"></urban-input>
     </div>
 
     <h2><code>rippleColor</code> attribute colors just the ripple</h2>
     <div id="ripple-color" class="container">
-        <input-ripple label="placeholder text" rippleColor="#22a7f0"></input-ripple>
+        <urban-input label="placeholder text" rippleColor="#22a7f0"></urban-input>
     </div>
 
     <h2><code>center</code> attribute will center the text</h2>
     <div id="center" class="container">
-        <input-ripple label="placeholder text" center></input-ripple>
+        <urban-input label="placeholder text" center></urban-input>
     </div>
 
     <h2>Entering a password? No problem</h2>
     <div id="password" class="container">
-        <input-ripple label="placeholder text" password></input-ripple>
+        <urban-input label="placeholder text" password></urban-input>
     </div>
 
 </body>
