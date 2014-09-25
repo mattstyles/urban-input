@@ -1,6 +1,6 @@
 {
   "name": "urban-input",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Input element with a ripple",
   "keywords": "urban, input, ripple, polymer, web-components",
   "main": "urban-input.html",

@@ -1,4 +1,9 @@
 
+# 0.7.0 - 25.09.2014
+
+* _add_ - iconRight attribute
+* _add_ - icon attribute
+
 # 0.6.0 - 24.09.2014
 
 * __inaugurated into urban components__
