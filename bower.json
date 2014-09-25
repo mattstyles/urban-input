@@ -6,6 +6,13 @@
   "main": "urban-input.html",
   "author": "Matt Styles @personalurban",
   "homepage": "https://github.com/mattstyles/urban-input",
+  "ignore": [
+     "*.sh",
+     ".*",
+     "**/.*",
+     "components",
+     "node_modules"
+  ],
   "dependencies": {
     "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
     "core-input": "Polymer/core-input#>=0.3.3 <1.0.0",
