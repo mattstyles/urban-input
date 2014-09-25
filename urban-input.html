@@ -16,7 +16,10 @@ Element providing a ripple on focussing an input box.
 @status alpha
 @homepage http://mattstyles.github.io/urban-input
 -->
-<polymer-element extends="core-input" name="urban-input" attributes="label rippleColor center password">
+<polymer-element
+    name="urban-input"
+    extends="core-input"
+    attributes="icon label rippleColor center password">
 
     <template>
 
@@ -24,6 +27,9 @@ Element providing a ripple on focussing an input box.
 
         <div id="container">
             <content></content>
+            <template if="{{ icon }}">
+                <core-icon id="icon" icon="{{ icon }}"></core-icon>
+            </template>
             <template if="{{ label }}">
                 <span id="label" class="fit">{{ label }}</span>
             </template>
@@ -68,6 +74,10 @@ Polymer( 'urban-input', {
 
         if ( this.password ) {
             this.$.input.type = 'password';
+        }
+
+        if ( this.icon ) {
+            this.classList.add( 'icon' );
         }
     },
 

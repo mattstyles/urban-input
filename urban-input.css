@@ -7,7 +7,7 @@
     cursor: text;
 }
 
-::content core-icon {
+:host #icon {
     position: absolute;
     top: 6px;
 }
@@ -34,7 +34,7 @@
     text-align: center;
 }
 
-.fit {
+:host .fit {
     left: 0;
     top: 0;
     right: 0;
@@ -42,7 +42,7 @@
     padding: .5em 1em;
 }
 
-#container {
+:host #container {
     position: relative;
     left: 0;
     top: 0;
@@ -51,15 +51,15 @@
     padding: .5em 1em;
 }
 
-#label {
+:host #label {
     position: absolute;
     pointer-events: none;
     color: #888;
 }
-#label.hidden {
+:host #label.hidden {
     display: none;
 }
 
-#ripple {
+:host #ripple {
     pointer-events: none;
 }
