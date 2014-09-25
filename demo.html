@@ -8,7 +8,6 @@
 
     <link rel="import" href="urban-input.html">
     <link rel="import" href="../urban-icons/urban-icons.html">
-    <link rel="import" href="../core-icon/core-icon.html">
 
     <style media="screen">
         body {
@@ -52,13 +51,16 @@
             color: #444;
         }
 
-        urban-input {
+        urban-input,
+        urban-input /deep/ paper-ripple,
+        urban-input /deep/ paper-ripple /deep/ canvas {
             /*background: #eee;*/
             border-radius: 6px;
         }
+
         .container {
             display: block;
-            margin: 2em 0;
+            margin: 1em 0 2em;
         }
 
         #basic urban-input {
@@ -111,6 +113,11 @@
     <h2>Want to add an <code>icon</code>? Go ahead</h2>
     <div id="icon" class="container">
         <urban-input icon="urban:attention" label="placeholder text"></urban-input>
+    </div>
+
+    <h2>You can even drag that icon over to the right with one swish of the attribute wand</h2>
+    <div id="iconRight" class="container">
+        <urban-input iconRight icon="urban:attention" label="placeholder text"></urban-input>
     </div>
 
 </body>

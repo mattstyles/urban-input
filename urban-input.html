@@ -1,7 +1,8 @@
 
-<link href="../polymer/polymer.html" rel="import">
-<link href="../core-input/core-input.html" rel="import">
-<link href="../paper-ripple/paper-ripple.html" rel="import">
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-input/core-input.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<link rel="import" href="../core-icon/core-icon.html">
 
 <!--
 Copyright (c) 2014 Matt Styles @personalurban
@@ -19,14 +20,13 @@ Element providing a ripple on focussing an input box.
 <polymer-element
     name="urban-input"
     extends="core-input"
-    attributes="icon label rippleColor center password">
+    attributes="icon iconRight label rippleColor center password">
 
     <template>
 
         <link rel="stylesheet" href="urban-input.css" />
 
         <div id="container">
-            <content></content>
             <template if="{{ icon }}">
                 <core-icon id="icon" icon="{{ icon }}"></core-icon>
             </template>
@@ -43,8 +43,9 @@ Element providing a ripple on focussing an input box.
 
 Polymer( 'urban-input', {
 
+    icon: null,
+    iconRight: false,
     center: false,
-
     password: false,
 
     bounds: null,
@@ -78,6 +79,10 @@ Polymer( 'urban-input', {
 
         if ( this.icon ) {
             this.classList.add( 'icon' );
+        }
+
+        if (this.iconRight ) {
+            this.classList.add( 'right' );
         }
     },
 

@@ -12,10 +12,23 @@
     top: 6px;
 }
 :host(.icon) /deep/ input {
-    margin-left: 32px;
+    margin-left: 2em;
+    width: calc( 100% - 2em );
 }
 :host(.icon) /deep/ #label {
-    left: 32px;
+    left: 2em;
+}
+
+:host(.right) #icon {
+    right: 1em;
+}
+:host(.icon.right) /deep/ input {
+    margin-left: 0px;
+    margin-right: 2em;
+}
+:host(.icon.right) /deep/ #label {
+    left: 0;
+    margin-right: 2em;
 }
 
 
